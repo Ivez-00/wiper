@@ -1,0 +1,76 @@
+wiper() {  
+echo "\n#####################################"
+
+echo """""""
+          ******       ******
+           *****       *****
+            **** ***** ****
+             *** ** ** ***
+              ****   ****
+               ***   ***
+                **   **
+     """""""  
+     
+echo "######################################"
+echo "- wiper, system wide junk file cleaner"
+echo "- lightweight tool for cleaning your device"
+echo "- version 1.0"
+echo """""""
+     - checks cache files and wipe them
+     - in single click
+     - NOTE: if the (check) and (wipe)
+     - returned a (directory not found) means
+     - the directory and files has been deleted
+     -
+     """""""
+     
+               
+select answer in check wipe exit;
+do case $answer in
+check) echo "checking system wide cache..";
+sleep 2;
+
+
+
+size=`du -hc /storage/emulated/0/Android/data/*/cache
+     du -hc /storage/emulated/0/pictures/.thumbnails
+     du -hc /data/user/0/*/code_cache
+     du -hc /data/user/0/*/cache`
+printf "\n{$size}"; sleep 3; wiper;;
+
+   
+wipe) echo "wiping system wide cache..";
+sleep 2;
+
+wiped=`rm -rf /storage/emulated/0/pictures/.thumbnails
+      rm -rf /storage/emulated/0/Android/data/*/cache
+      rm -rf /storage/emulated/0/.thumbnails
+      rm -rf /data/user/0/*/code_cache
+      rm -rf /data/user/0/*/cache
+      du -hc %s /storage/emulated/0/Android/data/*/cache
+      du -hc %s /storage/emulated/0/pictures/.thumbnails
+      du -hc %s /data/user/0/*/code_cache
+      du -hc /data/user/0/*/cache`
+
+printf "\n{$wiped}"; sleep 3; wiper;;
+
+exit) echo "- exiting...."; exit;;
+ esac
+done
+}
+
+if [ "$(whoami)" != "root" ]; then 
+echo "Root perm aquired"
+
+else 
+
+clear 
+
+wiper
+fi
+
+
+#let me know if my code needs some correction/cleaning
+#or improvements
+#if you want to use some of this code in your work
+#give some credits
