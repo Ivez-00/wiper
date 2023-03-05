@@ -1,6 +1,6 @@
 # wiper
 
-* system wide cache cleaner 
+* system wide cache cleaner
 
 
 ## Compatibility
@@ -10,6 +10,9 @@
 ## Instructions
 * just flash in magisk then reboot.
 * in terminal, type "su" then "wiper"
+
+• Download : https://www.pling.com/p/1864145
+• Join TG : https://t.me/Mod_Dumpz
 
 # Version 2
 
