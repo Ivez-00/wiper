@@ -2,7 +2,7 @@ SKIPUNZIP=1
 
 MODEL=`getprop ro.product.model`
 console_print() {
-    ui_print "\n#####################################"
+    ui_print "#####################################"
 
     ui_print """""""
           ******       ******
