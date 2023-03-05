@@ -11,4 +11,9 @@
 * just flash in magisk then reboot.
 * in terminal, type "su" then "wiper"
 
+# Version 2
+
+• Code refinement/clean up
+• added new path-to-clean directories
+
 
