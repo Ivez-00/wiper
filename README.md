@@ -21,4 +21,12 @@
 
 • added new path-to-clean directories
 
+# Version 3
+
+* Added FSTRIM
+
+* Quick Garbage files deletion
+
+* Code Redefine
+
 
